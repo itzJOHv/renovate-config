@@ -1,5 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Default Renovate config for @promise",
-  "extends": ["github>promise/renovate-config:other(promise)"]
+  "description": "Default Renovate config for @itzJOHv",
+  "extends": ["github>promise/renovate-config:other(itzJOHv)"]
 }
