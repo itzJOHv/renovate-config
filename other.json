@@ -58,6 +58,11 @@
       "extends": ["packages:linters", "packages:test", "github>djohts/renovate-config:automerge"]
     },
     {
+      "description": "Group Fortawesome monorepo",
+      "matchPackagePrefixes": ["@fortawesome/"],
+      "groupName": "Font Awesome"
+    },
+    {
       "description": "Group Docusaurus dependencies",
       "matchPackagePrefixes": ["@docusaurus/"],
       "groupName": "Docusaurus",
