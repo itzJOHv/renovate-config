@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default Renovate config where argument is assignee",
 
-  "timezone": "Europe/Oslo",
+  "timezone": "Europe/Kyiv",
 
   "assignees": ["{{arg0}}"],
   "labels": ["dependencies"],
@@ -24,7 +24,7 @@
     "enabled": true,
     "assignees": ["{{arg0}}"],
     "schedule": ["before 5am on the first day of the month"],
-    "extends": ["github>promise/renovate-config:automerge"]
+    "extends": ["github>djohts/renovate-config:automerge"]
   },
   "postUpdateOptions": ["npmDedupe"],
 
@@ -46,16 +46,16 @@
     {
       "description": "Automerge dependencies with built-in type definitions",
       "matchPackageNames": ["discord.js", "@types/node", "typescript"],
-      "extends": ["github>promise/renovate-config:automerge"]
+      "extends": ["github>djohts/renovate-config:automerge"]
     },
     {
       "description": "Automerge patches",
       "matchUpdateTypes": ["patch", "pin", "pinDigest", "digest", "rollback", "bump"],
-      "extends": ["github>promise/renovate-config:automerge"]
+      "extends": ["github>djohts/renovate-config:automerge"]
     },
     {
       "description": "Automerge linting and testing dependency upgrades",
-      "extends": ["packages:linters", "packages:test", "github>promise/renovate-config:automerge"]
+      "extends": ["packages:linters", "packages:test", "github>djohts/renovate-config:automerge"]
     },
     {
       "description": "Group Docusaurus dependencies",
@@ -71,7 +71,7 @@
     },
     {
       "description": "Group linting dependencies",
-      "matchPackageNames": ["eslint-config-promise", "promise/eslint-config"],
+      "matchPackageNames": ["eslint-config-djohts", "djohts/eslint-config"],
       "extends": ["packages:linters"],
       "groupName": "linting",
       "pin": { "groupName": "Pin Dependencies", "groupSlug": "pin-dependencies" }
@@ -96,7 +96,7 @@
     {
       "description": "Automerge node version",
       "matchManagers": ["nvm"],
-      "extends": ["github>promise/renovate-config:automerge"]
+      "extends": ["github>djohts/renovate-config:automerge"]
     }
   ]
 }
