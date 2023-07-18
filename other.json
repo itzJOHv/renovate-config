@@ -2,6 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default Renovate config where argument is assignee",
 
+  "extends": [
+    "group:recommended",
+    "group:monorepos"
+  ],
+
   "timezone": "Europe/Kyiv",
 
   "assignees": ["{{arg0}}"],
@@ -56,11 +61,6 @@
     {
       "description": "Automerge linting and testing dependency upgrades",
       "extends": ["packages:linters", "packages:test", "github>djohts/renovate-config:automerge"]
-    },
-    {
-      "description": "Group Fortawesome monorepo",
-      "matchPackagePrefixes": ["@fortawesome/"],
-      "groupName": "Font Awesome"
     },
     {
       "description": "Group Docusaurus dependencies",
