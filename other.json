@@ -28,8 +28,7 @@
   "lockFileMaintenance": {
     "enabled": true,
     "assignees": ["{{arg0}}"],
-    "schedule": ["before 5am on the first day of the month"],
-    "extends": ["github>djohts/renovate-config:automerge"]
+    "schedule": ["before 5am on the first day of the month"]
   },
   "postUpdateOptions": ["npmDedupe"],
 
@@ -50,17 +49,15 @@
   "packageRules": [
     {
       "description": "Automerge dependencies with built-in type definitions",
-      "matchPackageNames": ["discord.js", "@types/node", "typescript"],
-      "extends": ["github>djohts/renovate-config:automerge"]
+      "matchPackageNames": ["discord.js", "@types/node", "typescript"]
     },
     {
       "description": "Automerge patches",
-      "matchUpdateTypes": ["patch", "pin", "pinDigest", "digest", "rollback", "bump"],
-      "extends": ["github>djohts/renovate-config:automerge"]
+      "matchUpdateTypes": ["patch", "pin", "pinDigest", "digest", "rollback", "bump"]
     },
     {
       "description": "Automerge linting and testing dependency upgrades",
-      "extends": ["packages:linters", "packages:test", "github>djohts/renovate-config:automerge"]
+      "extends": ["packages:linters", "packages:test"]
     },
     {
       "description": "Group Docusaurus dependencies",
@@ -100,8 +97,7 @@
     },
     {
       "description": "Automerge node version",
-      "matchManagers": ["nvm"],
-      "extends": ["github>djohts/renovate-config:automerge"]
+      "matchManagers": ["nvm"]
     }
   ]
 }
